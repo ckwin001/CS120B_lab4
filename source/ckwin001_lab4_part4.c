@@ -18,29 +18,29 @@ void Tick(){
                 case start:
                         PORTB = 0x00; state = 0; PORTC = state; break;
                 case 0:
-			if (PORTA & 0x07 == 1) {state = 1;}
+			if (PINA & 0x07 == 1) {state = 1;}
 			else {state = 0;}
 			PORTC = state; break;
 		case 1:
-			if (PORTA & 0x07 == 0) {state = 2;}
+			if (PINA & 0x07 == 0) {state = 2;}
 			else {state = 0;}
 			PORTC = state; break;
                 case 2:
-			if (PORTA & 0x07 == 2) {state = 3; PORTB = 1;}
+			if (PINA & 0x07 == 2) {state = 3; PORTB = 1;}
 			else {state = 0;}
 			PORTC = state; break;
 		case 3:
-			if (PORTA & 0x80) {state=0; PORTB=0;}
-			else if (PORTA & 0x07 == 1) {state = 4;}
+			if (PINA & 0x80) {state=0; PORTB=0;}
+			else if (PINA & 0x07 == 1) {state = 4;}
 			else {state = 3;}
 			PORTC = state; break;
 		case 4:
-			if (PORTA & 0x80) {state=0; PORTB=0;}
-                        else if (PORTA & 0x07 == 0) {state = 5;}
+			if (PINA & 0x80) {state=0; PORTB=0;}
+                        else if (PINA & 0x07 == 0) {state = 5;}
                         else {state = 3;}
                         PORTC = state; break;
 		case 5:
-			if (PORTA&0x80||PORTA&0x07==2) {state=0; PORTB=0;}
+			if (PINA&0x80||PINA&0x07==2) {state=0; PORTB=0;}
                         else {state = 3;}
                         PORTC = state; break;
 
