@@ -1,3 +1,11 @@
+/*         Your Name & E-mail: Casey Kwinn, ckwin001@ucr.edu
+*          Lab Section:023
+ *         Assignment: Lab #4  Exercise #2
+  
+ *         I acknowledge all content contained herein, excluding template or example code, is my own original work.
+ *
+ *         Demo Link:
+ */
 #include <avr/io.h>
 #ifdef _SIMULATE_
 #include "../header/simAVRHeader.h"
