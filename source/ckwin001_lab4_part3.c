@@ -18,7 +18,7 @@ void Tick(){
                 case start:
                         PORTB = 0x00; state = 0; PORTC = state; break;
                 case 0:
-			if (PINA & 0x07 == 1) {state = 1;}
+			if (PINA & 0x07 == 4) {state = 1;}
 			else {state = 0;}
 			PORTC = state; break;
 		case 1:

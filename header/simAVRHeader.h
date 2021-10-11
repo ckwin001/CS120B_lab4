@@ -4,9 +4,9 @@
 #include <avr/sleep.h>
 #include "../../simavr/simavr/sim/avr/avr_mcu_section.h"
 AVR_MCU(F_CPU,"atmega1284");
-AVR_MCU_VCD_FILE("build/results/Lab2_introToAVR_trace.vcd",1000);
+AVR_MCU_VCD_FILE("build/results/Lab4_trace.vcd",1000);
 
 const struct avr_mmcu_vcd_trace_t _mytrace[] _MMCU_ = {
-    { AVR_MCU_VCD_SYMBOL("PORTB"), .what = (void*)&PORTB, } ,
     { AVR_MCU_VCD_SYMBOL("PINA"), .what = (void*)&PINA, } ,
+    { AVR_MCU_VCD_SYMBOL("PORTB"), .what = (void*)&PORTB, } ,
 };
